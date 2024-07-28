@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La Heladería</title>
+</head>
+<body>
+    <h1>Bienvenido a La Heladería</h1>
+    <ul>
+        {% for producto in productos %}
+        <li>{{ producto.nombre }} - ${{ producto.precio_publico }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredientes</title>
+</head>
+<body>
+    <h1>Ingredientes</h1>
+    <ul>
+        {% for ingrediente in ingredientes %}
+            <li>
+                <a href="{{ url_for('main.ingrediente', ingrediente_id=ingrediente.id) }}">{{ ingrediente.nombre }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
